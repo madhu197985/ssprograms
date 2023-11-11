@@ -1,0 +1,22 @@
+#!/bin/bash
+#Find the sum of arrays and find the factorial of output from the sum of arrays
+array=[5 10 15 20]
+sum=0
+for element in "${array[@]}"
+do
+	sum=$(sum + elements)
+done
+fact()
+{          
+	local n=$1
+	if [ $n -le  1 ]
+	then
+		echo 1
+	else
+		echo $((n * $(fact $((n-1)))))
+	fi
+}
+result=$(fact $sum)
+echo "sum of array : $sum)
+echo "factorial of sum : $result"
+
